@@ -44,24 +44,21 @@
     border-radius: 8px;
     border: 1px solid #eee;
   }
-  .lang-btn {
-    background: white;
+  .lang-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #666;
+  }
+  .lang-select {
+    padding: 10px 16px;
     border: 2px solid #0056b3;
+    border-radius: 8px;
+    background: #fff;
     color: #0056b3;
-    padding: 8px 20px;
-    margin: 0 5px;
-    border-radius: 20px;
-    cursor: pointer;
     font-weight: bold;
-    font-size: 14px;
-    transition: all 0.3s ease;
-  }
-  .lang-btn:hover {
-    background: #e6f0fa;
-  }
-  .lang-btn.active {
-    background: #0056b3;
-    color: white;
+    font-size: 15px;
+    cursor: pointer;
   }
   
   /* --- إخفاء وإظهار النصوص --- */
@@ -84,9 +81,12 @@
 
   <!-- أزرار تغيير اللغة -->
   <div class="lang-switcher">
-    <button class="lang-btn" onclick="changeLanguage('ar')">العربية</button>
-    <button class="lang-btn" onclick="changeLanguage('fr')">Français</button>
-    <button class="lang-btn active" onclick="changeLanguage('en')">English</button>
+    <label for="langSelect" class="lang-label">Language / اللغة</label>
+    <select id="langSelect" class="lang-select" onchange="changeLanguage(this.value)">
+      <option value="ar">العربية</option>
+      <option value="fr">Français</option>
+      <option value="en" selected>English</option>
+    </select>
   </div>
 
   <!-- ========================================== -->
@@ -94,7 +94,7 @@
   <!-- ========================================== -->
   <div id="content-en" class="content-section active" dir="ltr">
     <h1>Terms of Service of Plateforme Forsa (منصة فرصة)</h1>
-    <p><strong>Effective Date:</strong> June 2026</p>
+    <p><strong>Effective Date:</strong> October 2026</p>
 
     <h2>1. Acceptance of Terms</h2>
     <p>By using the Plateforme Forsa application, you agree to comply with these Terms of Service. If you do not agree with these terms, please do not use the application.</p>
@@ -148,7 +148,7 @@
   <!-- ========================================== -->
   <div id="content-ar" class="content-section" dir="rtl">
     <h1>شروط استخدام تطبيق منصة فرصة</h1>
-    <p><strong>تاريخ السريان:</strong> يونيو 2026</p>
+    <p><strong>تاريخ السريان:</strong> أكتوبر 2026</p>
 
     <h2>1. قبول الشروط</h2>
     <p>باستخدامك لتطبيق "منصة فرصة"، فإنك توافق على الالتزام بشروط الاستخدام هذه. إذا كنت لا توافق على هذه الشروط، يُرجى عدم استخدام التطبيق.</p>
@@ -202,7 +202,7 @@
   <!-- ========================================== -->
   <div id="content-fr" class="content-section" dir="ltr">
     <h1>Conditions d'Utilisation de Plateforme Forsa</h1>
-    <p><strong>Date de prise d'effet :</strong> Juin 2026</p>
+    <p><strong>Date de prise d'effet :</strong> Octobre 2026</p>
 
     <h2>1. Acceptation des Conditions</h2>
     <p>En utilisant l'application Plateforme Forsa, vous acceptez de vous conformer à ces Conditions d'Utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser l'application.</p>
@@ -262,15 +262,12 @@
       section.classList.remove('active');
     });
     
-    // إزالة التفعيل من كل الأزرار
-    var buttons = document.querySelectorAll('.lang-btn');
-    buttons.forEach(function(btn) {
-      btn.classList.remove('active');
-    });
-    
-    // إظهار النص المطلوب وتفعيل الزر الخاص به
+    // إظهار النص المطلوب
     document.getElementById('content-' + lang).classList.add('active');
-    event.target.classList.add('active');
+
+    // مزامنة القائمة المنسدلة
+    var select = document.getElementById('langSelect');
+    if (select) select.value = lang;
 
     // تغيير اتجاه الصفحة ولغتها الأساسية
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';

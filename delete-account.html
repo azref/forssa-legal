@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Account Deletion - Al-Sanea Al-Hirafi</title>
+<title>Account Deletion - Plateforme Forsa</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -64,24 +64,21 @@
     border-radius: 8px;
     border: 1px solid #eee;
   }
-  .lang-btn {
-    background: white;
+  .lang-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #666;
+  }
+  .lang-select {
+    padding: 10px 16px;
     border: 2px solid #0056b3;
+    border-radius: 8px;
+    background: #fff;
     color: #0056b3;
-    padding: 8px 20px;
-    margin: 0 5px;
-    border-radius: 20px;
-    cursor: pointer;
     font-weight: bold;
-    font-size: 14px;
-    transition: all 0.3s ease;
-  }
-  .lang-btn:hover {
-    background: #e6f0fa;
-  }
-  .lang-btn.active {
-    background: #0056b3;
-    color: white;
+    font-size: 15px;
+    cursor: pointer;
   }
   
   /* --- إخفاء وإظهار النصوص --- */
@@ -116,9 +113,12 @@
 
   <!-- أزرار تغيير اللغة -->
   <div class="lang-switcher">
-    <button class="lang-btn" onclick="changeLanguage('ar')">العربية</button>
-    <button class="lang-btn" onclick="changeLanguage('fr')">Français</button>
-    <button class="lang-btn active" onclick="changeLanguage('en')">English</button>
+    <label for="langSelect" class="lang-label">Language / اللغة</label>
+    <select id="langSelect" class="lang-select" onchange="changeLanguage(this.value)">
+      <option value="ar">العربية</option>
+      <option value="fr">Français</option>
+      <option value="en" selected>English</option>
+    </select>
   </div>
 
   <!-- ========================================== -->
@@ -126,24 +126,24 @@
   <!-- ========================================== -->
   <div id="content-en" class="content-section active" dir="ltr">
     <h1>Account and Data Deletion</h1>
-    <p>If you wish to delete your Al-Sanea Al-Hirafi account and all associated data, you can do so easily. We process these requests in accordance with Google Play's data safety policies and applicable data protection laws (including Law 09-08).</p>
+    <p>If you wish to delete your Plateforme Forsa account and all associated data, you can do so easily. We process these requests in accordance with Google Play's data safety policies and applicable data protection laws (including Law 09-08).</p>
 
     <h2>Method 1: In-App Deletion (Recommended)</h2>
-    <p>The fastest and easiest way to delete your account is directly through the Al-Sanea Al-Hirafi application:</p>
+    <p>The fastest and easiest way to delete your account is directly through the Plateforme Forsa application:</p>
     <ul>
-      <li>Open the Al-Sanea Al-Hirafi app and log in.</li>
+      <li>Open the Plateforme Forsa app and log in.</li>
       <li>Go to <strong>Settings</strong>, then scroll down to the <strong>Account</strong> section.</li>
       <li>Tap on <strong>Delete account permanently</strong>.</li>
       <li>A confirmation dialog will appear. You will be asked to enter a confirmation word (e.g., "DELETE" or "حذف") to prevent accidental deletion.</li>
     </ul>
-    <p><em>Note: When using this method, a secure cloud function is triggered, instantly and automatically erasing all your data from the database.</em></p>
+    <p><em>Note: When using this method, a secure cloud function is triggered, automatically erasing all your data within moments of confirmation.</em></p>
 
     <h2>Method 2: Deletion Request via Email</h2>
     <p>If you have already uninstalled the app and can no longer access your account, you can request data deletion via email:</p>
     <ul>
       <li><strong>Send an email to:</strong> <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></li>
       <li><strong>Email Subject:</strong> Account Deletion Request</li>
-      <li><strong>Important:</strong> You must send this email from the exact email address registered with your Al-Sanea Al-Hirafi account to verify your identity. We may ask for additional identification if necessary to protect user privacy.</li>
+      <li><strong>Important:</strong> You must send this email from the exact email address registered with your Plateforme Forsa account to verify your identity. We may ask for additional identification if necessary to protect user privacy.</li>
     </ul>
     <p>Email requests will be processed within 7 to 14 business days.</p>
 
@@ -166,24 +166,24 @@
   <!-- ========================================== -->
   <div id="content-ar" class="content-section" dir="rtl">
     <h1>حذف الحساب والبيانات</h1>
-    <p>إذا كنت ترغب في حذف حسابك على تطبيق "الصانع الحرفي" وكافة البيانات المرتبطة به، يمكنك القيام بذلك بسهولة. نحن نعالج هذه الطلبات وفقاً لسياسات أمان البيانات الخاصة بـ Google Play وقوانين حماية البيانات المعمول بها (بما في ذلك القانون 09-08).</p>
+    <p>إذا كنت ترغب في حذف حسابك على تطبيق "منصة فرصة" وكافة البيانات المرتبطة به، يمكنك القيام بذلك بسهولة. نحن نعالج هذه الطلبات وفقاً لسياسات أمان البيانات الخاصة بـ Google Play وقوانين حماية البيانات المعمول بها (بما في ذلك القانون 09-08).</p>
 
     <h2>الطريقة الأولى: الحذف من داخل التطبيق (موصى بها)</h2>
-    <p>أسرع وأسهل طريقة لحذف حسابك هي مباشرة من خلال تطبيق "الصانع الحرفي":</p>
+    <p>أسرع وأسهل طريقة لحذف حسابك هي مباشرة من خلال تطبيق "منصة فرصة":</p>
     <ul>
-      <li>افتح تطبيق "الصانع الحرفي" وقم بتسجيل الدخول.</li>
+      <li>افتح تطبيق "منصة فرصة" وقم بتسجيل الدخول.</li>
       <li>اذهب إلى <strong>الإعدادات</strong>، ثم مرر لأسفل إلى قسم <strong>الحساب</strong>.</li>
       <li>اضغط على <strong>حذف الحساب نهائياً</strong>.</li>
       <li>ستظهر نافذة تأكيد. سيُطلب منك إدخال كلمة تأكيد (مثل "DELETE" أو "حذف") لمنع الحذف العرضي.</li>
     </ul>
-    <p><em>ملاحظة: عند استخدام هذه الطريقة، يتم تشغيل دالة سحابية آمنة، تقوم بمسح كافة بياناتك من قاعدة البيانات بشكل فوري وتلقائي.</em></p>
+    <p><em>ملاحظة: عند استخدام هذه الطريقة، يتم تشغيل دالة سحابية آمنة، تقوم بمسح كافة بياناتك من قاعدة البيانات تلقائيًا خلال لحظات من التأكيد.</em></p>
 
     <h2>الطريقة الثانية: طلب الحذف عبر البريد الإلكتروني</h2>
     <p>إذا كنت قد قمت بإلغاء تثبيت التطبيق ولم يعد بإمكانك الوصول إلى حسابك، يمكنك طلب حذف البيانات عبر البريد الإلكتروني:</p>
     <ul>
       <li><strong>أرسل بريداً إلكترونياً إلى:</strong> <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></li>
       <li><strong>موضوع البريد:</strong> طلب حذف الحساب</li>
-      <li><strong>هام:</strong> يجب إرسال هذا البريد من نفس عنوان البريد الإلكتروني المسجل في حسابك على "الصانع الحرفي" للتحقق من هويتك. قد نطلب إثبات هوية إضافي إذا لزم الأمر لحماية خصوصية المستخدمين.</li>
+      <li><strong>هام:</strong> يجب إرسال هذا البريد من نفس عنوان البريد الإلكتروني المسجل في حسابك على "منصة فرصة" للتحقق من هويتك. قد نطلب إثبات هوية إضافي إذا لزم الأمر لحماية خصوصية المستخدمين.</li>
     </ul>
     <p>تتم معالجة الطلبات عبر البريد الإلكتروني في غضون 7 إلى 14 يوم عمل.</p>
 
@@ -206,24 +206,24 @@
   <!-- ========================================== -->
   <div id="content-fr" class="content-section" dir="ltr">
     <h1>Suppression du Compte et des Données</h1>
-    <p>Si vous souhaitez supprimer votre compte Al-Sanea Al-Hirafi et toutes les données associées, vous pouvez le faire facilement. Nous traitons ces demandes conformément aux politiques de sécurité des données de Google Play et aux lois applicables sur la protection des données (y compris la Loi 09-08).</p>
+    <p>Si vous souhaitez supprimer votre compte Plateforme Forsa et toutes les données associées, vous pouvez le faire facilement. Nous traitons ces demandes conformément aux politiques de sécurité des données de Google Play et aux lois applicables sur la protection des données (y compris la Loi 09-08).</p>
 
     <h2>Méthode 1 : Suppression via l'Application (Recommandée)</h2>
-    <p>Le moyen le plus rapide et le plus simple de supprimer votre compte est directement via l'application Al-Sanea Al-Hirafi :</p>
+    <p>Le moyen le plus rapide et le plus simple de supprimer votre compte est directement via l'application Plateforme Forsa :</p>
     <ul>
-      <li>Ouvrez l'application Al-Sanea Al-Hirafi et connectez-vous.</li>
+      <li>Ouvrez l'application Plateforme Forsa et connectez-vous.</li>
       <li>Allez dans <strong>Paramètres</strong>, puis faites défiler jusqu'à la section <strong>Compte</strong>.</li>
       <li>Appuyez sur <strong>Supprimer le compte définitivement</strong>.</li>
       <li>Une boîte de dialogue de confirmation apparaîtra. Il vous sera demandé de saisir un mot de confirmation (par ex. "DELETE" ou "حذف") pour éviter toute suppression accidentelle.</li>
     </ul>
-    <p><em>Remarque : Lors de l'utilisation de cette méthode, une fonction cloud sécurisée est déclenchée, effaçant instantanément et automatiquement toutes vos données de la base de données.</em></p>
+    <p><em>Remarque : Lors de l'utilisation de cette méthode, une fonction cloud sécurisée est déclenchée, effaçant automatiquement toutes vos données dans les instants suivant la confirmation.</em></p>
 
     <h2>Méthode 2 : Demande de Suppression par E-mail</h2>
     <p>Si vous avez déjà désinstallé l'application et ne pouvez plus accéder à votre compte, vous pouvez demander la suppression des données par e-mail :</p>
     <ul>
       <li><strong>Envoyez un e-mail à :</strong> <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></li>
       <li><strong>Objet de l'e-mail :</strong> Demande de suppression de compte</li>
-      <li><strong>Important :</strong> Vous devez envoyer cet e-mail à partir de l'adresse e-mail exacte enregistrée avec votre compte Al-Sanea Al-Hirafi pour vérifier votre identité. Nous pouvons demander une identification supplémentaire si nécessaire pour protéger la vie privée des utilisateurs.</li>
+      <li><strong>Important :</strong> Vous devez envoyer cet e-mail à partir de l'adresse e-mail exacte enregistrée avec votre compte Plateforme Forsa pour vérifier votre identité. Nous pouvons demander une identification supplémentaire si nécessaire pour protéger la vie privée des utilisateurs.</li>
     </ul>
     <p>Les demandes par e-mail seront traitées dans un délai de 7 à 14 jours ouvrables.</p>
 
@@ -252,15 +252,12 @@
       section.classList.remove('active');
     });
     
-    // إزالة التفعيل من كل الأزرار
-    var buttons = document.querySelectorAll('.lang-btn');
-    buttons.forEach(function(btn) {
-      btn.classList.remove('active');
-    });
-    
-    // إظهار النص المطلوب وتفعيل الزر الخاص به
+    // إظهار النص المطلوب
     document.getElementById('content-' + lang).classList.add('active');
-    event.target.classList.add('active');
+
+    // مزامنة القائمة المنسدلة
+    var select = document.getElementById('langSelect');
+    if (select) select.value = lang;
 
     // تغيير اتجاه الصفحة ولغتها الأساسية
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -268,11 +265,11 @@
     
     // تحديث عنوان الصفحة
     if(lang === 'ar') {
-      document.title = "حذف الحساب - الصانع الحرفي";
+      document.title = "حذف الحساب - منصة فرصة";
     } else if(lang === 'fr') {
-      document.title = "Suppression du Compte - Al-Sanea Al-Hirafi";
+      document.title = "Suppression du Compte - Plateforme Forsa";
     } else {
-      document.title = "Account Deletion - Al-Sanea Al-Hirafi";
+      document.title = "Account Deletion - Plateforme Forsa";
     }
   }
 </script>

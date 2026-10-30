@@ -57,24 +57,21 @@
     border-radius: 8px;
     border: 1px solid #eee;
   }
-  .lang-btn {
-    background: white;
+  .lang-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #666;
+  }
+  .lang-select {
+    padding: 10px 16px;
     border: 2px solid #0056b3;
+    border-radius: 8px;
+    background: #fff;
     color: #0056b3;
-    padding: 8px 20px;
-    margin: 0 5px;
-    border-radius: 20px;
-    cursor: pointer;
     font-weight: bold;
-    font-size: 14px;
-    transition: all 0.3s ease;
-  }
-  .lang-btn:hover {
-    background: #e6f0fa;
-  }
-  .lang-btn.active {
-    background: #0056b3;
-    color: white;
+    font-size: 15px;
+    cursor: pointer;
   }
   
   /* --- إخفاء وإظهار النصوص --- */
@@ -103,9 +100,12 @@
   
   <!-- أزرار تغيير اللغة -->
   <div class="lang-switcher">
-    <button class="lang-btn" onclick="changeLanguage('ar')">العربية</button>
-    <button class="lang-btn" onclick="changeLanguage('fr')">Français</button>
-    <button class="lang-btn active" onclick="changeLanguage('en')">English</button>
+    <label for="langSelect" class="lang-label">Language / اللغة</label>
+    <select id="langSelect" class="lang-select" onchange="changeLanguage(this.value)">
+      <option value="ar">العربية</option>
+      <option value="fr">Français</option>
+      <option value="en" selected>English</option>
+    </select>
   </div>
 
   <!-- ========================================== -->
@@ -113,7 +113,7 @@
   <!-- ========================================== -->
   <div id="content-en" class="content-section active" dir="ltr">
     <h1>Privacy Policy of "منصة فرصة" (Plateforme Forsa)</h1>
-    <p><strong>Effective Date:</strong> August 2026</p>
+    <p><strong>Effective Date:</strong> October 2026</p>
 
     <h2>1. Identity of the Data Controller</h2>
     <p><strong>Data Controller:</strong> Plateforme Forsa Administration (Independent Developer)  
@@ -150,7 +150,7 @@
     <h3>4.5 Automatically collected data</h3>
     <p>We may collect:</p>
     <ul>
-      <li>Crash reports.</li>
+      <li>Crash reports (Crashlytics).</li><li>Advertising identifier (Advertising ID) used by AdMob.</li>
       <li>Device information (model, operating system, application version).</li>
       <li>Technical logs for performance and debugging.</li>
     </ul>
@@ -177,14 +177,14 @@
 
     <h2>7. Data Storage and Hosting</h2>
     <p><strong>Local Storage:</strong> Your data (such as messages and audio files) is cached locally on your device to improve speed and reduce data consumption.</p>
-    <p>Your data is hosted via Supabase, which acts as a data processor according to our instructions. The data is hosted on secure servers. Data transfers outside Morocco are carried out in accordance with applicable legal guarantees and CNDP deliberations.</p>
+    <p>Your data is hosted via Supabase, which acts as a data processor according to our instructions. The data is hosted on secure servers. Data transfers outside Morocco are carried out in accordance with applicable legal guarantees and CNDP deliberations.</p><p><strong>Device backup:</strong> the application can back up its local database to your own Google Drive app-specific folder. This backup stays in your Google account and is not accessible to us; you can remove it from your Google Drive at any time.</p>
 
     <h2>8. Data Sharing</h2>
     <p>We do not sell your data. We may share data with:</p>
     <ul>
-      <li>Supabase (backend services, database, and authentication).</li>
+      <li>Supabase (backend services, database, and authentication).</li><li>Google (Crashlytics for crash reports, Firebase Cloud Messaging for push notifications).</li>
       <li>Google AdMob (advertising services for displaying banners and interstitial ads).</li>
-      <li>OneSignal (for sending push notifications).</li>
+      <li>Firebase Cloud Messaging, provided by Google (for push notifications).</li>
     </ul>
 
     <h2>9. Data Retention and Zero Data Retention Policy</h2>
@@ -227,7 +227,7 @@
   <!-- ========================================== -->
   <div id="content-ar" class="content-section" dir="rtl">
     <h1>سياسة خصوصية تطبيق "منصة فرصة"</h1>
-    <p><strong>تاريخ السريان:</strong> غشت 2026</p>
+    <p><strong>تاريخ السريان:</strong> أكتوبر 2026</p>
 
     <h2>1. هوية المسؤول عن المعالجة</h2>
     <p><strong>المسؤول عن المعالجة:</strong> إدارة منصة فرصة (مطور مستقل)  
@@ -264,7 +264,7 @@
     <h3>4.5 البيانات المجمعة تلقائياً</h3>
     <p>قد نقوم بجمع:</p>
     <ul>
-      <li>تقارير الأعطال (Crash reports).</li>
+      <li>تقارير الأعطال (Crash reports) عبر Crashlytics.</li><li>معرّف الإعلانات (Advertising ID) الذي يستخدمه AdMob.</li>
       <li>معلومات الجهاز (الطراز، نظام التشغيل، إصدار التطبيق).</li>
       <li>السجلات التقنية (Logs) للأداء وإصلاح الأخطاء.</li>
     </ul>
@@ -291,14 +291,14 @@
 
     <h2>7. تخزين واستضافة البيانات</h2>
     <p><strong>التخزين المحلي:</strong> يتم تخزين بياناتك (مثل الرسائل والملفات الصوتية) مؤقتاً (Cache) على جهازك لتحسين السرعة وتقليل استهلاك البيانات.</p>
-    <p>تُستضاف بياناتك عبر منصة Supabase، والتي تعمل كمعالج للبيانات وفقاً لتعليماتنا. تُستضاف البيانات على خوادم آمنة. تتم عمليات نقل البيانات خارج المغرب وفقاً للضمانات القانونية المعمول بها ومقررات اللجنة الوطنية (CNDP).</p>
+    <p>تُستضاف بياناتك عبر منصة Supabase، والتي تعمل كمعالج للبيانات وفقاً لتعليماتنا. تُستضاف البيانات على خوادم آمنة. تتم عمليات نقل البيانات خارج المغرب وفقاً للضمانات القانونية المعمول بها ومقررات اللجنة الوطنية (CNDP).</p><p><strong>النسخ الاحتياطي على الجهاز:</strong> يمكن للتطبيق نسخ قاعدة بياناته المحلية احتياطيًا إلى مجلد خاص به داخل حسابك على Google Drive. يبقى هذا النسخ في حسابك ولا نستطيع الوصول إليه، ويمكنك حذفه من Drive في أي وقت.</p>
 
     <h2>8. مشاركة البيانات</h2>
     <p>نحن لا نبيع بياناتك. قد نشارك البيانات مع:</p>
     <ul>
-      <li>Supabase (الخدمات الخلفية، قاعدة البيانات، والمصادقة).</li>
+      <li>Supabase (الخدمات الخلفية، قاعدة البيانات، والمصادقة).</li><li>Google (Crashlytics لتقارير الأعطال، وFirebase Cloud Messaging للإشعارات).</li>
       <li>Google AdMob (خدمات إعلانية لعرض اللافتات والإعلانات البينية).</li>
-      <li>OneSignal (لإرسال الإشعارات الفورية).</li>
+      <li>Firebase Cloud Messaging من Google (لإرسال الإشعارات الفورية).</li>
     </ul>
 
     <h2>9. الاحتفاظ بالبيانات وسياسة الحذف الآلي</h2>
@@ -341,7 +341,7 @@
   <!-- ========================================== -->
   <div id="content-fr" class="content-section" dir="ltr">
     <h1>Politique de Confidentialité de "منصة فرصة" (Plateforme Forsa)</h1>
-    <p><strong>Date de prise d'effet :</strong> Août 2026</p>
+    <p><strong>Date de prise d'effet :</strong> Octobre 2026</p>
 
     <h2>1. Identité du Responsable de Traitement</h2>
     <p><strong>Responsable de Traitement :</strong> Administration de Plateforme Forsa (Développeur Indépendant)  
@@ -378,7 +378,7 @@
     <h3>4.5 Données collectées automatiquement</h3>
     <p>Nous pouvons collecter :</p>
     <ul>
-      <li>Rapports de plantage (Crash reports).</li>
+      <li>Rapports de plantage (Crash reports) via Crashlytics.</li><li>Identifiant publicitaire (Advertising ID) utilisé par AdMob.</li>
       <li>Informations sur l'appareil (modèle, système d'exploitation, version de l'application).</li>
       <li>Journaux techniques (Logs) pour les performances et le débogage.</li>
     </ul>
@@ -405,14 +405,14 @@
 
     <h2>7. Stockage et Hébergement des Données</h2>
     <p><strong>Stockage Local :</strong> Vos données (telles que les messages et les fichiers audio) sont mises en cache localement sur votre appareil pour améliorer la vitesse et réduire la consommation de données.</p>
-    <p>Vos données sont hébergées via Supabase, qui agit en tant que sous-traitant selon nos instructions. Les données sont hébergées sur des serveurs sécurisés. Les transferts de données hors du Maroc sont effectués conformément aux garanties légales applicables et aux délibérations de la CNDP.</p>
+    <p>Vos données sont hébergées via Supabase, qui agit en tant que sous-traitant selon nos instructions. Les données sont hébergées sur des serveurs sécurisés. Les transferts de données hors du Maroc sont effectués conformément aux garanties légales applicables et aux délibérations de la CNDP.</p><p><strong>Sauvegarde sur l'appareil :</strong> l'application peut sauvegarder sa base de données locale dans un dossier propre à l'application sur votre compte Google Drive. Cette sauvegarde reste dans votre compte Google et ne nous est pas accessible ; vous pouvez la supprimer depuis Google Drive à tout moment.</p>
 
     <h2>8. Partage des Données</h2>
     <p>Nous ne vendons pas vos données. Nous pouvons partager des données avec :</p>
     <ul>
-      <li>Supabase (services backend, base de données et authentification).</li>
+      <li>Supabase (services backend, base de données et authentification).</li><li>Google (Crashlytics pour les rapports de plantage, Firebase Cloud Messaging pour les notifications push).</li>
       <li>Google AdMob (services publicitaires pour l'affichage de bannières et d'annonces interstitielles).</li>
-      <li>OneSignal (pour l'envoi de notifications push).</li>
+      <li>Firebase Cloud Messaging, fourni par Google (pour l'envoi de notifications push).</li>
     </ul>
 
     <h2>9. Conservation des Données et Politique de Rétention Zéro</h2>
@@ -461,15 +461,12 @@
       section.classList.remove('active');
     });
     
-    // إزالة التفعيل من كل الأزرار
-    var buttons = document.querySelectorAll('.lang-btn');
-    buttons.forEach(function(btn) {
-      btn.classList.remove('active');
-    });
-    
-    // إظهار النص المطلوب وتفعيل الزر الخاص به
+    // إظهار النص المطلوب
     document.getElementById('content-' + lang).classList.add('active');
-    event.target.classList.add('active');
+
+    // مزامنة القائمة المنسدلة
+    var select = document.getElementById('langSelect');
+    if (select) select.value = lang;
 
     // تغيير اتجاه الصفحة ولغتها الأساسية
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
