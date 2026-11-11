@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
@@ -92,7 +92,14 @@
     padding-left: 0;
     padding-right: 20px;
   }
-</style>
+.notice {
+      background: #FAF2E3;
+      border-inline-start: 4px solid #B45309;
+      padding: 12px 16px;
+      margin: 14px 0;
+      border-radius: 6px;
+    }
+    </style>
 </head>
 <body>
 
@@ -177,9 +184,16 @@
 
     <h2>7. Data Storage and Hosting</h2>
     <p><strong>Local Storage:</strong> Your data (such as messages and audio files) is cached locally on your device to improve speed and reduce data consumption.</p>
-    <p>Your data is hosted via Supabase, which acts as a data processor according to our instructions. The data is hosted on secure servers. Data transfers outside Morocco are carried out in accordance with applicable legal guarantees and CNDP deliberations.</p><p><strong>Device backup:</strong> the application can back up its local database to your own Google Drive app-specific folder. This backup stays in your Google account and is not accessible to us; you can remove it from your Google Drive at any time.</p>
+    <p>Your data is hosted via Supabase, which acts as a data processor according to our instructions. The data is hosted on secure servers. International transfers are detailed in section 8 below.</p><p><strong>Device backup:</strong> the application can back up its local database to your own Google Drive app-specific folder. This backup stays in your Google account and is not accessible to us; you can remove it from your Google Drive at any time.</p>
 
-    <h2>8. Data Sharing</h2>
+    <h2>8. International Data Transfers</h2>
+    <div class="notice">
+      <p>Your data is hosted by the cloud provider Supabase in <strong>France (European Union)</strong>, i.e. outside Moroccan territory. This transfer relies on the specific and explicit consent you give when registering, and on the necessity to perform the contract concluded between you and us.</p>
+    </div>
+    <p>The transfer is limited to the data required to operate the service: identity, phone number, email address, manually selected city, photos, messages and voice recordings sent in the application, and the device token used for notifications. It is protected by TLS encryption, strict row-level access controls (RLS) and data processing agreements (DPA) concluded with each provider. Notifications and advertising are handled by Google (Firebase Cloud Messaging, AdMob) within the European Union, without transmitting your identity to advertisers.</p>
+    <p>You may withdraw your consent at any time by requesting the deletion of your account; withdrawal of consent ends the possibility of using the service.</p>
+
+    <h2>9. Data Sharing</h2>
     <p>We do not sell your data. We may share data with:</p>
     <ul>
       <li>Supabase (backend services, database, and authentication).</li><li>Google (Crashlytics for crash reports, Firebase Cloud Messaging for push notifications).</li>
@@ -187,7 +201,7 @@
       <li>Firebase Cloud Messaging, provided by Google (for push notifications).</li>
     </ul>
 
-    <h2>9. Data Retention and Zero Data Retention Policy</h2>
+    <h2>10. Data Retention and Zero Data Retention Policy</h2>
     <p>We only retain your data for the time necessary to:</p>
     <ul>
       <li>Provide the matchmaking and communication service.</li>
@@ -195,7 +209,7 @@
     </ul>
     <p><strong>Zero Data Retention:</strong> To guarantee maximum privacy, all service requests and internal chat messages are automatically and permanently deleted from the cloud database after 10 days.</p>
 
-    <h2>10. Your Rights and Data Deletion</h2>
+    <h2>11. Your Rights and Data Deletion</h2>
     <p>In accordance with Moroccan law (Law 09-08), you have the following rights:</p>
     <ul>
       <li>Right of access to your data.</li>
@@ -205,10 +219,10 @@
     </ul>
     <p><strong>Account and data deletion:</strong> You can permanently delete your account and all associated data (profile, messages, requests) directly from the application by going to <strong>Settings > Request account deletion</strong>. You can also request deletion by contacting us at <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a>.</p>
 
-    <h2>11. Protection of Minors</h2>
+    <h2>12. Protection of Minors</h2>
     <p>The application is not intended for persons under 18 years of age (minors). We do not knowingly collect personal data from children or minors. If we discover that an account belongs to a minor, we will block the account and immediately delete all associated data from the cloud database.</p>
 
-    <h2>12. Security</h2>
+    <h2>13. Security</h2>
     <p>We implement appropriate security measures, including:</p>
     <ul>
       <li>Secure authentication (JWT).</li>
@@ -216,7 +230,7 @@
       <li>HTTPS/TLS encryption.</li>
     </ul>
 
-    <h2>13. Contact</h2>
+    <h2>14. Contact</h2>
     <p>Application Support & Administration  
 
     Email: <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
@@ -291,9 +305,16 @@
 
     <h2>7. تخزين واستضافة البيانات</h2>
     <p><strong>التخزين المحلي:</strong> يتم تخزين بياناتك (مثل الرسائل والملفات الصوتية) مؤقتاً (Cache) على جهازك لتحسين السرعة وتقليل استهلاك البيانات.</p>
-    <p>تُستضاف بياناتك عبر منصة Supabase، والتي تعمل كمعالج للبيانات وفقاً لتعليماتنا. تُستضاف البيانات على خوادم آمنة. تتم عمليات نقل البيانات خارج المغرب وفقاً للضمانات القانونية المعمول بها ومقررات اللجنة الوطنية (CNDP).</p><p><strong>النسخ الاحتياطي على الجهاز:</strong> يمكن للتطبيق نسخ قاعدة بياناته المحلية احتياطيًا إلى مجلد خاص به داخل حسابك على Google Drive. يبقى هذا النسخ في حسابك ولا نستطيع الوصول إليه، ويمكنك حذفه من Drive في أي وقت.</p>
+    <p>تُستضاف بياناتك عبر منصة Supabase، والتي تعمل كمعالج للبيانات وفقاً لتعليماتنا. تُستضاف البيانات على خوادم آمنة. تُفصَّل عمليات النقل إلى خارج المغرب في القسم 8 أدناه.</p><p><strong>النسخ الاحتياطي على الجهاز:</strong> يمكن للتطبيق نسخ قاعدة بياناته المحلية احتياطيًا إلى مجلد خاص به داخل حسابك على Google Drive. يبقى هذا النسخ في حسابك ولا نستطيع الوصول إليه، ويمكنك حذفه من Drive في أي وقت.</p>
 
-    <h2>8. مشاركة البيانات</h2>
+    <h2>8. نقل المعطيات إلى خارج المغرب</h2>
+    <div class="notice">
+      <p>تُستضاف معطياتك لدى مزوّد الخدمة السحابية Supabase في <strong>فرنسا (الاتحاد الأوروبي)</strong>، أي خارج التراب المغربي. يتم هذا النقل استنادًا إلى رضاك الصريح والمحدد الذي تمنحه عند التسجيل، وإلى ضرورة تنفيذ العقد المبرم بينك وبيننا.</p>
+    </div>
+    <p>يقتصر النقل على المعطيات اللازمة لتشغيل الخدمة: الهوية، رقم الهاتف، البريد الإلكتروني، المدينة المحددة يدويًا، الصور والرسائل والتسجيلات الصوتية المرسلة داخل التطبيق، ومعرّف الجهاز المستعمل في الإشعارات. ويُؤمَّن عبر اتصال مشفّر (TLS) وضوابط وصول صارمة على مستوى الصفوف (RLS) وعقود معالجة بيانات (DPA) مبرمة مع كل مزوّد. وتُعالج الإشعارات والإعلانات عبر خدمات Google (Firebase Cloud Messaging وAdMob) داخل الاتحاد الأوروبي، دون نقل هويتك إلى المعلنين.</p>
+    <p>يمكنك سحب رضاك في أي وقت بطلب حذف الحساب، مع العلم أن سحب الرضا يُنهي إمكانية استخدام الخدمة.</p>
+
+    <h2>9. مشاركة البيانات</h2>
     <p>نحن لا نبيع بياناتك. قد نشارك البيانات مع:</p>
     <ul>
       <li>Supabase (الخدمات الخلفية، قاعدة البيانات، والمصادقة).</li><li>Google (Crashlytics لتقارير الأعطال، وFirebase Cloud Messaging للإشعارات).</li>
@@ -301,7 +322,7 @@
       <li>Firebase Cloud Messaging من Google (لإرسال الإشعارات الفورية).</li>
     </ul>
 
-    <h2>9. الاحتفاظ بالبيانات وسياسة الحذف الآلي</h2>
+    <h2>10. الاحتفاظ بالبيانات وسياسة الحذف الآلي</h2>
     <p>نحتفظ ببياناتك فقط للوقت اللازم من أجل:</p>
     <ul>
       <li>تقديم خدمة الربط والتواصل.</li>
@@ -309,7 +330,7 @@
     </ul>
     <p><strong>الحذف الآلي (Zero Data Retention):</strong> لضمان أقصى درجات الخصوصية، يتم حذف جميع طلبات الخدمة والرسائل الداخلية تلقائياً ونهائياً من قاعدة البيانات السحابية بعد مرور 10 أيام.</p>
 
-    <h2>10. حقوقك وحذف البيانات</h2>
+    <h2>11. حقوقك وحذف البيانات</h2>
     <p>وفقاً للقانون المغربي (القانون 09-08)، يحق لك ما يلي:</p>
     <ul>
       <li>حق الولوج إلى بياناتك.</li>
@@ -319,10 +340,10 @@
     </ul>
     <p><strong>حذف الحساب والبيانات:</strong> يمكنك حذف حسابك وكافة البيانات المرتبطة به نهائياً (الملف الشخصي، الرسائل، الطلبات) مباشرة من التطبيق بالذهاب إلى <strong>الإعدادات > طلب حذف الحساب</strong>. يمكنك أيضاً طلب الحذف عبر مراسلتنا على <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a>.</p>
 
-    <h2>11. حماية القاصرين</h2>
+    <h2>12. حماية القاصرين</h2>
     <p>التطبيق غير موجه للأشخاص الذين تقل أعمارهم عن 18 عاماً (القاصرين). نحن لا نجمع عن قصد أي بيانات شخصية من الأطفال أو القاصرين. إذا اكتشفنا أن حساباً يعود لمستخدم قاصر، سنقوم بحظر الحساب وحذف جميع البيانات المرتبطة به فوراً من قاعدة البيانات.</p>
 
-    <h2>12. الأمان</h2>
+    <h2>13. الأمان</h2>
     <p>نحن نطبق تدابير أمنية مناسبة، بما في ذلك:</p>
     <ul>
       <li>المصادقة الآمنة (JWT).</li>
@@ -330,7 +351,7 @@
       <li>تشفير HTTPS/TLS.</li>
     </ul>
 
-    <h2>13. للتواصل</h2>
+    <h2>14. للتواصل</h2>
     <p>إدارة ودعم التطبيق  
 
     البريد الإلكتروني: <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
@@ -405,9 +426,16 @@
 
     <h2>7. Stockage et Hébergement des Données</h2>
     <p><strong>Stockage Local :</strong> Vos données (telles que les messages et les fichiers audio) sont mises en cache localement sur votre appareil pour améliorer la vitesse et réduire la consommation de données.</p>
-    <p>Vos données sont hébergées via Supabase, qui agit en tant que sous-traitant selon nos instructions. Les données sont hébergées sur des serveurs sécurisés. Les transferts de données hors du Maroc sont effectués conformément aux garanties légales applicables et aux délibérations de la CNDP.</p><p><strong>Sauvegarde sur l'appareil :</strong> l'application peut sauvegarder sa base de données locale dans un dossier propre à l'application sur votre compte Google Drive. Cette sauvegarde reste dans votre compte Google et ne nous est pas accessible ; vous pouvez la supprimer depuis Google Drive à tout moment.</p>
+    <p>Vos données sont hébergées via Supabase, qui agit en tant que sous-traitant selon nos instructions. Les données sont hébergées sur des serveurs sécurisés. Les transferts internationaux sont détaillés à la section 8 ci-dessous.</p><p><strong>Sauvegarde sur l'appareil :</strong> l'application peut sauvegarder sa base de données locale dans un dossier propre à l'application sur votre compte Google Drive. Cette sauvegarde reste dans votre compte Google et ne nous est pas accessible ; vous pouvez la supprimer depuis Google Drive à tout moment.</p>
 
-    <h2>8. Partage des Données</h2>
+    <h2>8. Transferts de Données hors du Maroc</h2>
+    <div class="notice">
+      <p>Vos données sont hébergées par le prestataire cloud Supabase en <strong>France (Union européenne)</strong>, donc hors du territoire marocain. Ce transfert repose sur votre consentement spécifique et explicite donné lors de l'inscription, ainsi que sur la nécessité d'exécuter le contrat conclu entre vous et nous.</p>
+    </div>
+    <p>Le transfert est limité aux données nécessaires au fonctionnement du service : identité, numéro de téléphone, adresse e-mail, ville sélectionnée manuellement, photos, messages et messages vocaux envoyés dans l'application, ainsi que le jeton d'appareil utilisé pour les notifications. Il est sécurisé par un chiffrement TLS, des contrôles d'accès stricts au niveau des lignes (RLS) et des contrats de traitement des données (DPA) conclus avec chaque prestataire. Les notifications et la publicité sont traitées par Google (Firebase Cloud Messaging, AdMob) au sein de l'Union européenne, sans transmission de votre identité aux annonceurs.</p>
+    <p>Vous pouvez retirer votre consentement à tout moment en demandant la suppression de votre compte ; ce retrait met fin à la possibilité d'utiliser le service.</p>
+
+    <h2>9. Partage des Données</h2>
     <p>Nous ne vendons pas vos données. Nous pouvons partager des données avec :</p>
     <ul>
       <li>Supabase (services backend, base de données et authentification).</li><li>Google (Crashlytics pour les rapports de plantage, Firebase Cloud Messaging pour les notifications push).</li>
@@ -415,7 +443,7 @@
       <li>Firebase Cloud Messaging, fourni par Google (pour l'envoi de notifications push).</li>
     </ul>
 
-    <h2>9. Conservation des Données et Politique de Rétention Zéro</h2>
+    <h2>10. Conservation des Données et Politique de Rétention Zéro</h2>
     <p>Nous ne conservons vos données que le temps nécessaire pour :</p>
     <ul>
       <li>Fournir le service de mise en relation et de communication.</li>
@@ -423,7 +451,7 @@
     </ul>
     <p><strong>Politique de non-conservation (Zero Data Retention) :</strong> Pour garantir une confidentialité maximale, toutes les demandes de service et les messages internes sont supprimés automatiquement et définitivement de la base de données cloud après 10 jours.</p>
 
-    <h2>10. Vos Droits et Suppression des Données</h2>
+    <h2>11. Vos Droits et Suppression des Données</h2>
     <p>Conformément à la loi marocaine (Loi 09-08), vous disposez des droits suivants :</p>
     <ul>
       <li>Droit d'accès à vos données.</li>
@@ -433,10 +461,10 @@
     </ul>
     <p><strong>Suppression du compte et des données :</strong> Vous pouvez supprimer définitivement votre compte et toutes les données associées (profil, messages, demandes) directement depuis l'application en allant dans <strong>Paramètres > Demander la suppression du compte</strong>. Vous pouvez également demander la suppression en nous contactant à <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a>.</p>
 
-    <h2>11. Protection des Mineurs</h2>
+    <h2>12. Protection des Mineurs</h2>
     <p>L'application n'est pas destinée aux personnes de moins de 18 ans (mineurs). Nous ne collectons intentionnellement aucune donnée personnelle auprès d'enfants ou de mineurs. Si nous découvrons qu'un compte appartient à un utilisateur mineur, nous bloquerons le compte et supprimerons immédiatement toutes les données associées de la base de données cloud.</p>
 
-    <h2>12. Sécurité</h2>
+    <h2>13. Sécurité</h2>
     <p>Nous mettons en œuvre des mesures de sécurité appropriées, notamment :</p>
     <ul>
       <li>Authentification sécurisée (JWT).</li>
@@ -444,7 +472,7 @@
       <li>Chiffrement HTTPS/TLS.</li>
     </ul>
 
-    <h2>13. Contact</h2>
+    <h2>14. Contact</h2>
     <p>Administration et Support de l'Application  
 
     E-mail : <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
@@ -485,3 +513,4 @@
 
 </body>
 </html>
+
